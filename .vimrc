@@ -161,6 +161,9 @@ Plugin 'prettier/vim-prettier'
 " Language Server
 Plugin 'neoclide/coc.nvim'
 
+" Git
+Plugin 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()           " required
 "------------------------------------------
