@@ -4,6 +4,9 @@ syntax on
 " ファイルタイプに基づいたインデントを有効化
 filetype plugin indent on
 
+" htmlやmarkdown編集でカーソルが前に行くのを防ぐ？
+syn sync fromstart
+
 " 自動インデントを有効化
 set autoindent
 
