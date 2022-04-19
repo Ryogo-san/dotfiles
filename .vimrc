@@ -45,6 +45,17 @@ set smartcase
 " backspaceキー有効化
 set backspace=indent,eol,start
 
+" HTMLの補完
+" https://qiita.com/Zhirou/items/f533dd40fceff6249049
+" 例：
+"   <div>の後に</を入力しEnter押すと真ん中に改行＆補完
+"   <div>の後に</を入力しTab押すと真ん中に改行なし＆補完
+augroup MyHTML
+    autocmd!
+    autocmd Filetype html inoremap <buffer> </<CR> </<C-x><C-o><ESC>F>a<CR><ESC>O
+    autocmd Filetype html inoremap <buffer> </<Tab> </<C-x><C-o><ESC>F>a
+augroup END
+
 " => Plugin系 -------------------------------------------------------------{{{
 "
 set nocompatible            " be improved, required
