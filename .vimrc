@@ -391,9 +391,11 @@ set showmatch
 set laststatus=2
 
 " Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+if !has('nvim')
+    python3 from powerline.vim import setup as powerline_setup
+    python3 powerline_setup()
+    python3 del powerline_setup
+endif
 
 " コマンドラインの補完
 set wildmode=list:longest
