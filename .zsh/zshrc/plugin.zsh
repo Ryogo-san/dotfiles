@@ -17,9 +17,9 @@ zplug load --verbose > /dev/null
 zplug zsh-users/zsh-completions
 
 # powerline
-if [ -f /usr/share/powerline/bindings/zsh/powerline.zsh ]; then
-    source /usr/share/powerline/bindings/zsh/powerline.zsh
-fi
+#if [ -f /usr/share/powerline/bindings/zsh/powerline.zsh ]; then
+#    source /usr/share/powerline/bindings/zsh/powerline.zsh
+#fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
