@@ -1,8 +1,8 @@
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
+source $(dirname "${BASH_SOURCE[0]:-$0}")/lib/powerline.sh
 
-pip3 install  powerline-status
-pip3 install  powerline-shell
+powerline
 
 sudo apt install nodejs npm
 npm install -g yarn
