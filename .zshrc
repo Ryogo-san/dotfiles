@@ -9,5 +9,6 @@ fi
 
 source "$ZSHRCDIR/alias.zsh"
 source "$ZSHRCDIR/base.zsh"
+source "$ZSHRCDIR/plugin.zsh"
 source "$ZSHRCDIR/option.zsh"
 
