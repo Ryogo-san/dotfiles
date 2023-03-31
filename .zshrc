@@ -1,3 +1,13 @@
+#==============================================================#
+#               .zshrc                                         #
+#==============================================================#
+
+# profile
+if [ "$ZSHRC_PROFILE" != "" ]; then
+    zmodload zsh/zprof && zprof > /dev/null
+fi
+
+#
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -20,13 +30,13 @@
 #fi
 
 ## zplug
-source ~/.zplug/init.zsh
-
+source ~/.zplug/init.zsh 
 ## theme
 zplug romkatv/powerlevel10k, as:theme, depth:1
 
 # コマンドをリンクして、PATHに追加し、プラグインは読み込む
-zplug load --verbose
+zplug load --verbose > /dev/null
+
 
 # 補完の強化
 zplug zsh-users/zsh-completions
