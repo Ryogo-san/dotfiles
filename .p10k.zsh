@@ -199,12 +199,19 @@
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=196
   # Default prompt symbol.
   rand=$RANDOM
-  #rand=`expr $RANDOM % 2`
-  if [ $rand -lt 20000 ]; then
+  #rand=`expr $RANDOM % 4`
+  if [ $rand -lt 7500 ]; then
+    piyo='🥚'
+  elif [ $rand -lt 15000 ]; then
     piyo='🐣'
-  else
+  elif [ $rand -lt 22500 ]; then
     piyo='🐥'
+  elif [ $rand -lt 30000 ]; then
+    piyo='🐔'
+  else
+    piyo='🥚🐣🐥🐔'
   fi
+  
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION="${piyo}"' ❯'
   #typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   # Prompt symbol in command vi mode.
