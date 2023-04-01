@@ -3,7 +3,13 @@
 bindkey -v
 
 ## プロンプト表示
-PROMPT='%F{green}%n@%m%F{white}:%f%f%F{blue}%~%f$ '
+rand=`expr $RANDOM % 2`
+if [ $rand -eq 0 ]; then
+    piyo='🐣'
+else
+    piyo='🐥'
+fi
+PROMPT="${piyo}"'%F{green}%n@%m%F{white}:%f%f%F{blue}%~%f$ '
 
 ## 色を使用できるようにする
 #autoload -Uz colors;colors
