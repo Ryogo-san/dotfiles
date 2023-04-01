@@ -106,9 +106,6 @@ let g:auto_save=1 "オートセーブは常に有効
 " undo treeの可視化
 Plugin 'sjl/gundo.vim'
 
-" 補完
-"Plugin 'neoclide/coc.nvim'
-
 " ソースコード整形
 Plugin 'prettier/vim-prettier'
 

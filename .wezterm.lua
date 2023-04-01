@@ -9,10 +9,7 @@ local function font_exists(font_name, fonts)
         if fonts[mid]<font_name then
             ng=mid
         else
-            ok=mid
-        end
-    end
-
+            ok=mid end end
     return font_name == fonts[ok]
 end
 
