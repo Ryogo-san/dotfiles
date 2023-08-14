@@ -13,3 +13,6 @@ alias la="ls -laG"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 alias ...='cd ../..'
+
+# wezterm
+alias wezterm="flatpak run org.wezfurlong.wezterm"

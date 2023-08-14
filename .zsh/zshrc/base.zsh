@@ -39,5 +39,13 @@ eval "$(rbenv init -)"
 
 ## sdkman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!$
-#export SDKMAN_DIR="$HOME/.sdkman"$
-#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"$
+export SDKMAN_DIR="$HOME/.sdkman"$
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PATH:$PYENV_ROOT/bin"
+eval "$(pyenv init --path)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+

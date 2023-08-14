@@ -121,6 +121,9 @@ if has('nvim')
     Plugin 'vim-airline/vim-airline-themes'
 endif
 
+" html
+Plugin 'alvan/vim-closetag'
+
 " All of your Plugins must be added before the following line
 call vundle#end()           " required
 
