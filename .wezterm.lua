@@ -1,4 +1,6 @@
 local wezterm = require 'wezterm'
+package.path = package.path..';'..os.getenv("HOME")..'/dotfiles/.wezterm/?.lua'
+local keybinds = require 'keybinds'
 local act=wezterm.action
 
 local function font_exists(font_name, fonts)
@@ -63,11 +65,9 @@ return {
     ----------------------------------------------------
     -- keys
     ----------------------------------------------------
-    keys= {
-        {key='C', mods='CTRL', action=act.CopyTo 'Clipboard' },
-        {key='v', mods='CTRL', action=act.PasteFrom 'Clipboard' },
-        {key='F9', mods='ALT', action=act.ShowTabNavigator },
-    },
+    keys = keybinds.create_keybinds(),
+    
+    mouse_bindings = keybinds.mouse_bindings,
 
     ----------------------------------------------------
     -- fonts
